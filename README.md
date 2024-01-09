@@ -1,2 +1,2 @@
 # MongoDB
-All MongoDB Database code ...!
+All MongoDB Database code ......!
