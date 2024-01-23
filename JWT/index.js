@@ -4,7 +4,7 @@ import { app } from "./app.js";
 dotenv.config({
   path: "./env",
 });
-
+//MongoDB connection code
 ConnectDB()
   .then(() => {
     app.listen(process.env.PORT || 8000, () => {
