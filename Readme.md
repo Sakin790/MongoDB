@@ -24,5 +24,15 @@ db.students.find({'isIDCard.hasPanCard': true})
 db.students.find().count().forEach((x)=>{
     print.json(x)
     })
+```
 
+## Conditional Find
+```javascript
+
+
+db.students.find({
+  age: {
+    $lt: 20 // lt for less than
+  }
+})
 ```

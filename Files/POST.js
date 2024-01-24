@@ -21,13 +21,3 @@ app.post("/api/users", async (req, res) => {
   });
   return res.status(201).json({ message: `result` });
 });
-
-{
-  name: "Sakin";
-  age: 1;
-  isIDCard: {
-    hasPanCard: true;
-    hasAdharCard: true;
-  }
-  hobby: ["anime", cooking];
-}
