@@ -12,7 +12,7 @@ app.post("/api/users", async (req, res) => {
       message: "All feild are required",
     });
   }
-   await User.create({
+  await User.create({
     firstName: body.firstName,
     lastName: body.lastName,
     email: body.email,
@@ -21,3 +21,13 @@ app.post("/api/users", async (req, res) => {
   });
   return res.status(201).json({ message: `result` });
 });
+
+{
+  name: "Sakin";
+  age: 1;
+  isIDCard: {
+    hasPanCard: true;
+    hasAdharCard: true;
+  }
+  hobby: ["anime", cooking];
+}
