@@ -13,7 +13,16 @@ students collection
   }
   hobby: ["anime", cooking];
 }
-
 db.students.find({'isIDCard.hasPanCard': true})
+
+```
+
+
+## Pointer in MongoDB
+
+```javaScript
+db.students.find().count().forEach((x)=>{
+    print.json(x)
+    })
 
 ```
