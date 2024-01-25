@@ -28,11 +28,32 @@ db.students.find().count().forEach((x)=>{
 
 ## Conditional Find
 ```javascript
-
-
 db.students.find({
   age: {
     $lt: 20 // lt for less than
   }
 })
+```
+
+# MongoDB Validation 
+```javaScript
+db.createCollection("books", {
+  validator: {
+    $jsonSchema: {
+      required: ["name", "price"],
+      properties: {
+        name: {
+          type: "string",
+          description: "Name must be a string and required",
+        },
+        price: {
+          type: "number",
+          description: "Price must be a number and required",
+        },
+      },
+    },
+  },
+  validationAction: 'error'
+});
+
 ```
