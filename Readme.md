@@ -43,11 +43,11 @@ db.createCollection("books", {
       required: ["name", "price"],
       properties: {
         name: {
-          type: "string",
+          bsonType: "string",
           description: "Name must be a string and required",
         },
         price: {
-          type: "number",
+         bsonType: "number",
           description: "Price must be a number and required",
         },
       },
