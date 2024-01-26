@@ -61,7 +61,6 @@ db.createCollection("books", {
 
 # Logical Operator 
 ### or
-
 ```javaScript
 db.collection.find({
   $or: [
@@ -78,3 +77,19 @@ db.collection.find({
   ]
 })
 ```
+### and
+```javaScript
+db.collection.find({
+  $and: [
+    {
+      age: {
+        $lt: 30
+      }
+    },
+    {
+      gender: "Female"
+    }
+  ]
+})
+```
+
