@@ -57,3 +57,24 @@ db.createCollection("books", {
 });
 
 ```
+
+
+# Logical Operator 
+### or
+
+```javaScript
+db.collection.find({
+  $or: [
+    {
+      age: {
+        $lte: 20
+      }
+    },
+    {
+      age: {
+        $gte: 40
+      }
+    }
+  ]
+})
+```
