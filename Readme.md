@@ -155,5 +155,45 @@ db.collection.aggregate([
     }
   },
 ]
+Another
+[
+  {
+    $group: {
+      _id: "$eyeColor",
+      count:{
+        $sum:1
+      }
+    }
+  },
+  {
+    $sort:{
+      count : -1
+    }
+  },
+  {
+    $limit: 3
+  }
+]
 ```
-# 
+# Find male and female
+```javaScript
+[
+  {
+    $group: {
+      _id: "$gender",
+      count:{
+        $sum : 1
+      }
+    },
+  },
+  {
+    $sort: {
+      count : -1
+    }
+  },
+  {
+    $limit: 2
+  }
+  
+]
+```
