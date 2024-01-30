@@ -92,5 +92,14 @@ db.collection.find({
   ]
 })
 ```
-# Sorting
-Exam are comming lets quite for few days
+# Aggregation Pipeline
+```javaScript
+Gender jader male tader find koro
+db.collection.aggregate([
+  {
+    "$match": {
+      gender: "Male"
+    }
+  }
+])
+```
