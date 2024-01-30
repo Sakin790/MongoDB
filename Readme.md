@@ -155,6 +155,17 @@ db.collection.aggregate([
   }
 ])
 
+# How many members are active in DB?
+[
+  {
+    $match: {
+      isActive: true
+    }
+  },
+  {
+    $count: 'Active'
+  }
+]
 
 ```
 
