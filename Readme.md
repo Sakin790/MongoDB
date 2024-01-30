@@ -145,5 +145,15 @@ db.collection.aggregate([
 ```
 # What is the average age of all users?
 ```javascript
-
+[
+  {
+    $group:{
+      _id:null, // null for all 
+      averageAge:{
+        $avg:'$age'
+      }
+    }
+  },
+]
 ```
+# 
