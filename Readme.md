@@ -117,7 +117,10 @@ db.collection.aggregate([
   }
 ])
 
-Root for all Document
+
+Akta group create koro jekhne id hobe
+age, and new document create koro jetar nam hobe "document" oi ducument er moddhe oi age er all information thkabe
+
  
 db.collection.aggregate([
   {
