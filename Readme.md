@@ -95,6 +95,7 @@ db.collection.find({
 # Aggregation Pipeline
 ```javaScript
 Gender jader male tader find koro
+
 db.collection.aggregate([
   {
     "$match": {
@@ -102,4 +103,32 @@ db.collection.aggregate([
     }
   }
 ])
+
+Id hobe age and oi age a kotojon exist kore tar name list korbe
+
+db.collection.aggregate([
+  {
+    $group: {
+      _id: "$age",
+      names: {
+        $push: "$name"
+      }
+    }
+  }
+])
+
+Root for all Document
+ 
+db.collection.aggregate([
+  {
+    $group: {
+      _id: "$age",
+      document: {
+        $push: "$$ROOT"
+      }
+    }
+  }
+])
+
 ```
+
