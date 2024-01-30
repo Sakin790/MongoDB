@@ -117,11 +117,8 @@ db.collection.aggregate([
   }
 ])
 
-
 Akta group create koro jekhne id hobe
 age, and new document create koro jetar nam hobe "document" oi ducument er moddhe oi age er all information thkabe
-
- 
 db.collection.aggregate([
   {
     $group: {
@@ -132,30 +129,9 @@ db.collection.aggregate([
     }
   }
 ])
-
----------------------------
-db.collection.aggregate([
-  {
-    "$match": {
-      gender: "Male"
-    }
-  },
-  {
-    $group: {
-      _id: "$age",
-      ageCount: {
-        $sum: 1
-      }
-    }
-  },
-  {
-    $sort: {
-      ageCount: -1
-    }
-  }
-])
-
-# How many members are active in DB?
+```
+# How many users are active in DB?
+```javascript
 [
   {
     $match: {
@@ -166,6 +142,8 @@ db.collection.aggregate([
     $count: 'Active'
   }
 ]
+```
+# What is the average age of all users?
+```javascript
 
 ```
-
