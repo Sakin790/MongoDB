@@ -133,5 +133,28 @@ db.collection.aggregate([
   }
 ])
 
+---------------------------
+db.collection.aggregate([
+  {
+    "$match": {
+      gender: "Male"
+    }
+  },
+  {
+    $group: {
+      _id: "$age",
+      ageCount: {
+        $sum: 1
+      }
+    }
+  },
+  {
+    $sort: {
+      ageCount: -1
+    }
+  }
+])
+
+
 ```
 
